@@ -1,0 +1,45 @@
+.myCarouselBox {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  position: relative;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+.myCarouselBox * {
+  box-sizing: border-box;
+}
+.myCarouselBox .mainItem img {
+  display: block;
+  width: 100%;
+}
+.myCarouselBox .thumbnails {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.myCarouselBox .thumbnails .thumbnail {
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+}
+.myCarouselBox .thumbnails .thumbnail.select::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  margin-left: -15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #fff;
+}
+.myCarouselBox .thumbnails .thumbnail.select img {
+  transition: all 0.5s ease;
+  opacity: .5;
+}
+.myCarouselBox .thumbnails .thumbnail img {
+  display: block;
+  width: 100%;
+}
